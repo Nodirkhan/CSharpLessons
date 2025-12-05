@@ -1,0 +1,198 @@
+{
+  "testType": "READING",                    // "READING" or "LISTENING"
+  "section": 1,                             // 1–3 for Listening, 1–3 for Reading
+  "passage": "Full reading passage text here...",   // null for Listening
+  "audioUrl": "https://cdn.example.com/audio/section1.mp3",  // null for Reading
+  "timeLimitMinutes": 30,                   // optional
+  "questions": [
+
+    // 1. Multiple Choice (single answer)
+    {
+      "id": 1001,
+      "type": "MULTIPLE_CHOICE",
+      "title": "1-4",
+      "order": 1,
+      "instruction": "Choose the correct letter, A, B, C or D.",
+      "questions": [
+        {
+          "id": 1011,
+          "order": 1,
+          "questionText": "What is the main aim of the research?",
+          "options": [
+            { "letter": "A", "text": "to count fish" },
+            { "letter": "B", "text": "to study survival rates" },
+            { "letter": "C", "text": "to improve fishing methods" },
+            { "letter": "D", "text": "to protect coral" }
+          ],
+          "correctAnswer": "B",
+          "explanation": "Paragraph 1 mentions survival of juvenile fish."
+        }
+        // ... more MCQs
+      ]
+    },
+
+    // 2. Multiple Choice (multiple answers) — Listening only
+    {
+      "id": 1002,
+      "type": "MULTIPLE_CHOICE_MULTIPLE",
+      "questionNumber": "5-10",
+      "instruction": "Choose THREE letters A–F.",
+      "questionText": "Which THREE facilities does the sports centre have?",
+      "options": [
+        { "letter": "A", "text": "swimming pool" },
+        { "letter": "B", "text": "tennis courts" },
+        { "letter": "C", "text": "gym" },
+        { "letter": "D", "text": "cafe" },
+        { "letter": "E", "text": "sauna" },
+        { "letter": "F", "text": "climbing wall" }
+      ],
+      "correctAnswers": ["A", "C", "E"]
+    },
+
+    // 3. Summary / Note / Table / Flow-chart Completion
+    {
+      "id": 1003,
+      "type": "SUMMARY_COMPLETION",           // or NOTE_COMPLETION, TABLE_COMPLETION, FLOWCHART_COMPLETION
+      "title": "11-16",
+      "order": 1,
+      "instruction": "Complete the summary below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+      "passageQuestions": [
+        {
+          "id": 1111,
+          "order": 11,
+          "correctAnswer": "light traps",
+          "explanation": "Paragraph 5"
+        },
+        {
+          "id": 1112,
+          "order": 12,
+          "correctAnswer": "48 hours"
+        },
+        {
+          "id": 1113,
+          "order": 13,
+          "correctAnswer": "predator density"
+        }
+      ],
+      "templateHtml": "<style></style><p>Scientists catch fish using <input data-blank-id=\"1111\">. Most deaths occur within the first <input data-blank-id=\"1112\"> due to high <input data-blank-id=\"1113\">.</p>"
+    },
+
+    // 4. Matching Headings
+    {
+      "id": 1004,
+      "type": "MATCHING_HEADINGS",
+      "questionNumber": "17-22",
+      "instruction": "Choose the correct heading from the list i–ix.",
+      "paragraphs": [
+        { "id": "paraA", "label": "A", "text": "The importance of reef settlement..." },
+        { "id": "paraB", "label": "B", "text": "Methods used in the study..." }
+      ],
+      "options": [
+        { "roman": "i",   "text": "A controversial theory" },
+        { "roman": "ii",  "text": "Surprising results" },
+        { "roman": "iii", "text": "Experimental techniques" }
+      ],
+      "correctAnswers": { "paraA": "iii", "paraB": "i" },
+      "extraOptions": true
+    },
+
+    // 5. Matching Information / Features / Sentence Endings
+    {
+      "id": 1005,
+      "type": "MATCHING",
+      "matchingSubType": "FEATURES",           // "INFORMATION", "FEATURES", "SENTENCE_ENDINGS"
+      "questionNumber": "23-26",
+      "instruction": "Match each statement with the correct person A–D.",
+      "questions": [
+        { "id": 2301, "questionNumber": 23, "text": "believes bigger fish swim slower" },
+        { "id": 2302, "questionNumber": 24, "text": "used light traps successfully" }
+      ],
+      "options": [
+        { "letter": "A", "text": "Dr Jones" },
+        { "letter": "B", "text": "Professor Smith" },
+        { "letter": "C", "text": "Dr Chen" },
+        { "letter": "D", "text": "The research team" }
+      ],
+      "correctAnswers": { "2301": "C", "2302": "A" },
+      "reusable": false
+    },
+
+    // 6. True / False / Not Given  |  Yes / No / Not Given
+    {
+      "id": 1006,
+      "type": "TRUE_FALSE_NOT_GIVEN",
+      "title": "27-32",
+      "order": 2,
+      "instruction": "Do the following statements agree with the information given?",
+      "options": ["TRUE", "FALSE", "NOT GIVEN"],
+      "subQuestions": [
+        {
+          "id": 2701,
+          "order": 27,
+          "text": "All juvenile fish settle during summer.",
+          "correctAnswer": "FALSE",
+          "explanation": "Only most do."
+        },
+        {
+          "id": 2702,
+          "questionNumber": 28,
+          "text": "Bigger fish always survive better.",
+          "correctAnswer": "NOT GIVEN"
+        }
+      ]
+    },
+
+    // 7. Short Answer Questions
+    {
+      "id": 1007,
+      "type": "SHORT_ANSWER",
+      "questionNumber": "33-40",
+      "instruction": "Answer the questions below. Use NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+      "questions": [
+        {
+          "id": 3301,
+          "questionNumber": 33,
+          "questionText": "What is the name of the island?",
+          "correctAnswer": "Lizard Island",
+          "wordLimit": "THREE WORDS"
+        },
+        {
+          "id": 3302,
+          "questionNumber": 34,
+          "questionText": "What tool is used to catch larval fish?",
+          "correctAnswer": "light trap"
+        }
+      ]
+    },
+
+    // 8. Sentence Completion
+    {
+      "id": 1008,
+      "type": "SENTENCE_COMPLETION",
+      "questionNumber": "35-40",
+      "instruction": "Complete the sentences below. Choose NO MORE THAN TWO WORDS.",
+      "sentences": [
+        {
+          "id": 3501,
+          "questionNumber": 35,
+          "text": "The highest mortality occurs during the first <input data-blank-id=\"3501\"> of settlement.",
+          "correctAnswer": "48 hours"
+        }
+      ]
+    },
+
+    // 9. Diagram / Map / Plan Labelling
+    {
+      "id": 1009,
+      "type": "DIAGRAM_LABELLING",
+      "questionNumber": "37-40",
+      "instruction": "Label the diagram. Choose NO MORE THAN TWO WORDS.",
+      "imageUrl": "https://cdn.example.com/diagram-fish-lifecycle.png",
+      "labels": [
+        { "id": 3701, "questionNumber": 37, "correctAnswer": "larval stage" },
+        { "id": 3702, "questionNumber": 38, "correctAnswer": "settlement" }
+      ]
+    }
+
+  ]
+}
