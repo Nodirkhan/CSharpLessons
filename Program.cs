@@ -49,6 +49,8 @@ internal class Program
             Console.WriteLine($"Raqam kiritishing kerak edikuuuuuuuuuuu, {number}");
         }
 
+
+        // Hello git
     }
 
     static void ChangeValue(out int a) // 005

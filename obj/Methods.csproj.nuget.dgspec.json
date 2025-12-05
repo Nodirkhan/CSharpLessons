@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Tests\\Methods\\Methods.csproj": {}
+    "C:\\Projects\\Tests\\CSharpLessons\\Methods.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Tests\\Methods\\Methods.csproj": {
+    "C:\\Projects\\Tests\\CSharpLessons\\Methods.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Tests\\Methods\\Methods.csproj",
+        "projectUniqueName": "C:\\Projects\\Tests\\CSharpLessons\\Methods.csproj",
         "projectName": "Methods",
-        "projectPath": "C:\\Projects\\Tests\\Methods\\Methods.csproj",
+        "projectPath": "C:\\Projects\\Tests\\CSharpLessons\\Methods.csproj",
         "packagesPath": "C:\\Users\\nabdumurotov\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Tests\\Methods\\obj\\",
+        "outputPath": "C:\\Projects\\Tests\\CSharpLessons\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
