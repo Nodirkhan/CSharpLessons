@@ -1,0 +1,1 @@
+Salom ustpz nima gap
